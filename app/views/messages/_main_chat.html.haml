@@ -1,0 +1,37 @@
+.chat-main
+  .chat-main__group-info
+    .left-box
+      %h2.left-box__current_group
+        zzzzz
+      %ul.member-list
+        Member :
+        %ls.member-name
+        aaa
+    .icon__edit
+      = link_to "#",class: "contents__btn" do
+        Edit
+  .chat-main__message-list
+    .massege
+      .massege__info
+        %p.massege__info__talk
+          zzz
+        %p.massege__info__date
+          = Time.now
+      %p.massege__text
+        アイウエオ
+    .massege
+      .massege__info
+        %p.massege__info__talker
+          zzz
+        %p.massege__info__date
+          = Time.now
+      %p.massege__text
+        アイウエオ
+  .chat-main__message-form
+    %form.new-massege
+      .input-box 
+        %input{type: "text", class:"input-box__text", placeholder: "type a massege"}
+        %label{class: "input-box__image"}
+          %i.far.fa-image
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", value:"Send", class:"submit-btn"}
